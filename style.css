@@ -1,0 +1,82 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+body {
+  background: #FC9CFF;
+  display: grid;
+  place-items: center;
+  height: 98vh;
+  margin: auto;
+  font-family: "Open Sans", sans-serif;
+  color: #fff; /* Improved text contrast */
+}
+
+.card {
+  background: #fdfdfd;
+  border-radius: 16px;
+  margin-top: 24px;
+  height: 96%;
+  width:48%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Adjusted box shadow for depth */
+  text-align: center;
+  display: inline-block;
+  justify-content: center;
+  align-items: center;
+
+}
+
+@media only screen and (min-width: 1000px) {
+  .card {
+    flex-direction: row-reverse;
+  }
+  .card img.birthday {
+    width: 40%;
+    max-width: 50vw;
+    max-height: auto;
+  }
+}
+
+@media only screen and (max-height: 640px) {
+  .card {
+    flex-direction: row-reverse;
+  }
+  .card img.birthday {
+    width: 40%;
+    max-width: 50vw;
+    max-height: auto;
+  }
+}
+
+img.birthday {
+  max-height: 30vh;
+}
+
+.text {
+  padding: 1em;
+  color: #333; /* Adjusted text color */
+}
+
+.muted {
+  opacity: 0.8;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+body.play-music {
+  animation: fadeIn 2s ease-in-out; /* Adjust the animation duration and timing function as needed */
+}
+
+audio{
+  margin: 24px;
+  padding: 24px;
+}
